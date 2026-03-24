@@ -80,7 +80,7 @@ public class BankSystem {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        BankSystem bankSystem = new BankSystem();
         while(true){
             System.out.println("1. Create Account");
             System.out.println("2. Deposit");
@@ -90,7 +90,7 @@ public class BankSystem {
             System.out.println("6. Display Customers");
             System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
-            BankSystem bankSystem = new BankSystem();
+
             int choice = sc.nextInt();
             switch(choice){
                 case 1:
