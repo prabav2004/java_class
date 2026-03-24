@@ -1,5 +1,5 @@
 public class Customer {
-    private static int accountNumber;
+    private static int accountNumber = 1000;
     private String name;
     private double balance;
     private String accountType;
