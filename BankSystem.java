@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class BankSystem {
     ArrayList<Customer> customers = new ArrayList<>();
 
-    public  void createAccount(int accountNumber,String name, double balance,String accountType,String email){
-        Customer customer = new Customer(accountNumber, name, balance, accountType, email);
+    public  void createAccount(String name, double balance,String accountType,String email){
+        Customer customer = new Customer( name, balance, accountType, email);
         customers.add(customer);
         System.out.println("Account created successfully....");
     }
@@ -94,8 +94,7 @@ public class BankSystem {
             int choice = sc.nextInt();
             switch(choice){
                 case 1:
-                    System.out.print("Enter account number: ");
-                    int accountNumber = sc.nextInt();
+                    
                     sc.nextLine(); 
                     System.out.print("Enter name: ");
                     String name = sc.nextLine();
@@ -107,7 +106,7 @@ public class BankSystem {
                     System.out.print("Enter email: ");
                     String email = sc.nextLine();
                     
-                    bankSystem.createAccount(accountNumber, name, balance, accountType, email);
+                    bankSystem.createAccount(name, balance, accountType, email);
                     break;
                 case 2:
                     System.out.print("Enter account number: ");
